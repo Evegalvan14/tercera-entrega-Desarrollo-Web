@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/bdc4f1a217.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css"/>
+    <title>TH Travel</title>
+</head>
+<body class="bodyForm">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html"><i class="fa-solid fa-earth-americas"></i> TH Travel</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+
+            <li class="nav-item">
+              <a class="nav-link navbar-brand" href="../index.html">INICIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar-brand" href="../pages/nuestros-servicios.html">NUESTROS SERVICIOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar-brand" href="../pages/ofertas.html">OFERTAS DEL MES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar-brand" href="../pages/galeria.html">GALERIA DE FOTOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link navbar-brand" href="../pages/form-contacto.html">CONTACTO</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+ 
+    
+      <div id="heading">
+        <h1> RESERVAS Y ATENCIÓN AL CLIENTE</h1>
+        <p id="descripcion">¡Nos gusta que nos escribas! Agradecemos sus comentarios, preguntas o sugerencias. Permítanos brindarle un mejor servicio y pronto recibirá una respuesta de uno de nuestros amables asociados.</p>
+      </div>
+      <div id="principal-form">
+        <form id="form">
+            <div id="datosPersonales">
+                <label id="name-label"><b>Nombre:</b></label>
+                <input id="name" type="name" name="name" class="form"  required placeholder="Nombre Completo"><br>
+                <br>
+                <label id="email-label"><b>Email:</b></label>
+                <input id="email" type="email" name="email" class="form"  required placeholder="ejemplo@mail.com"><br>
+                <br>
+                <label id="number-label"><b>Edad:</b></label>
+                <input id="number" type="number" name="number" class="form"  min="5" max="99" placeholder="18+">
+             </div>
+             <div id="opcionesDestinos"><br>
+                <label id="desplegable-label"><strong>¿Cuál de estos lugares te gustaría visitar?: </strong></label><br>
+                <select id="desplegable" name="desplegable" class="form">
+                    <option value="PDC">Playa del Carmen (México)</option>
+                    <option value="RepDom">República Dominicana</option>
+                    <option value="Bahamas">Bahamas</option>
+                    <option value="Jamaica">Jamaica</option>
+                    <option value="Jamaica">EE.UU</option>
+                    <option value="Jamaica">Italia</option>
+                    <option value="Jamaica">Francia</option>
+                    <option value="Jamaica">Otro</option>
+                 </select>    
+             </div>
+
+             <div id="fechas"><br>
+                <label id="fechaIda"><b> seleccione la fecha en la que desea viajar:</b></label>
+                <input id="fechaIda" type="date" name="fechaIda" class="form"><br>
+                <label id="fechaVuelta"><b>seleccione la fecha de regreso:</b></label>
+                <input id="fechaVuelta" type="date" name="fechaVuelta" class="form">
+             </div>
+             <div id="button-area"><br><br>
+                <label id="os-label"><b>Con que necesitás ayuda?</b></label><br>
+                <input type="checkbox" name="mex">Hospedaje<br>
+                <input type="checkbox" name="Repdomin">Vuelos<br>
+                <input type="checkbox" name="bahamas">Excursiones<br>
+                <input type="checkbox" name="jamaica">Traslados<br>
+              </div>
+
+              <div id="final"><br><br>
+                <label id="commentarios-label">Mensaje</label><br>
+                <textarea style= height:120px; class="form" placeholder="Por favor escriba su mensaje aquí..."></textarea><br><br>
+                <input id="submit" type="submit"  class="form">
+              </div>
+
+        </form>
+
+      </div>
+    
+    
+    
+
+
+
+    <footer>
+      <div class="container">
+        <div class="copyrigth">© Evelin Galván 2023</div>
+       </div>  
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>

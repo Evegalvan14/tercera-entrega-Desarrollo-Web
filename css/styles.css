@@ -1,0 +1,398 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Shadows+Into+Light&display=swap");
+#carouselExampleCaptions {
+  padding: 0 20px;
+  object-fit: cover;
+}
+#carouselExampleCaptions .carousel-caption {
+  background: linear-gradient(rgba(255, 255, 255, 0.3), rgb(0, 0, 0));
+}
+
+.nuestrosServicios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  margin: 40px;
+}
+.nuestrosServicios h1 {
+  color: #ff6600;
+  font-family: "Shadows Into Light", cursive;
+}
+
+.servicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 30px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+}
+.servicio .descripcion-Serv {
+  margin: 20px;
+  padding: 20px;
+}
+.servicio .descripcion-Serv h4 {
+  color: #035284;
+}
+@media screen and (max-width: 1024px) {
+  .servicio .servicio {
+    flex-direction: column;
+    align-items: center;
+  }
+  .servicio .descripcion-Serv {
+    text-align: center;
+  }
+  .servicio #servicio {
+    flex-direction: column-reverse;
+  }
+}
+
+/* SECCION OFERTAS */
+.promoPresentacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  padding-top: 15px;
+}
+
+.ofertas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.ofertas .contenedorPromo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 30px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+}
+.ofertas .contenedorPromo .descripcionPromo {
+  margin: 20px;
+  padding: 20px;
+}
+.ofertas .contenedorPromo .descripcionPromo .precioPromo {
+  margin-left: 20px;
+}
+
+.titGaleria, .mexico h3, .republicaDominicana h3, .bahamas h3 {
+  color: #ff6600;
+  text-align: center;
+  margin-top: 100px;
+  font-size: 30px;
+  font-weight: 400;
+  font-family: "Shadows Into Light", cursive;
+  font-style: normal;
+}
+
+.mexico h4, .republicaDominicana h4, .bahamas h4 {
+  margin: 30px;
+}
+
+.destinos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin: 10px;
+  padding: 20px;
+}
+.destinos .galeria {
+  border: 1px solid #ccc;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+}
+.destinos .galeria:hover {
+  background-color: #85C1E9;
+  color: #fff;
+}
+.destinos .galeria a {
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (max-width: 1024px) {
+  .destinos {
+    flex-wrap: wrap;
+  }
+}
+.contenedor-galeria {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 150px;
+  padding: 20px;
+  grid-gap: 10px;
+}
+.contenedor-galeria .img-galeria {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.contenedor-galeria .item-galeria:nth-child(1) {
+  grid-row-start: span 3;
+  grid-column-start: span 2;
+}
+.contenedor-galeria .item-galeria:nth-child(2) {
+  grid-row-start: span 2;
+}
+.contenedor-galeria .item-galeria:nth-child(4) {
+  grid-row-start: span 2;
+}
+.contenedor-galeria .item-galeria:nth-child(6) {
+  grid-column-start: span 2;
+}
+.contenedor-galeria .item-galeria:nth-child(13) {
+  grid-column-start: span 2;
+}
+.contenedor-galeria .item-galeria:nth-child(15) {
+  grid-column-start: span 2;
+}
+
+@media screen and (max-width: 1024px) {
+  .contenedor-galeria {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .item-galeria:nth-child(1) {
+    grid-row-start: span 2;
+    grid-column-start: span 2;
+  }
+  .item-galeria:nth-child(2) {
+    grid-row-start: span 1;
+  }
+  .item-galeria:nth-child(4) {
+    grid-row-start: span 2;
+  }
+  .item-galeria:nth-child(6) {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+  }
+  .item-galeria:nth-child(9) {
+    grid-row-start: span 2;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contenedor-galeria {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 10px;
+  }
+  .item-galeria:nth-child(4) {
+    grid-column-start: span 1;
+    grid-row-start: span 1;
+  }
+  .item-galeria:nth-child(7) {
+    grid-row-start: span 2;
+  }
+  .item-galeria:nth-child(5) {
+    grid-column-start: span 2;
+  }
+}
+/* SECCION FORMULARIO */
+.bodyForm {
+  width: 100%;
+  height: auto;
+  color: rgb(255, 255, 255);
+  background-image: url(https://marketplace.canva.com/Tem-o/MAE0IQTem-o/1/s2/canva-sin-t%C3%ADtulo-MAE0IQTem-o.jpg);
+  background-size: cover;
+  background-color: rgb(69, 182, 235);
+  background-repeat: no-repeat;
+}
+
+#heading {
+  max-width: 700px;
+  margin: 4rem auto;
+  padding: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#heading h1 {
+  color: #035284;
+  font-family: "Shadows Into Light", cursive;
+}
+
+#principal-form {
+  padding: 0% 20%;
+  display: flex;
+  justify-content: center;
+}
+#principal-form #form {
+  background-color: rgba(34, 34, 66, 0.365);
+  padding: 3rem 2.5rem;
+  border-radius: 7px;
+}
+#principal-form .form {
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.7rem;
+  border-radius: 6px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+}
+#principal-form #submit {
+  color: rgb(255, 255, 255);
+  font-size: 1.15rem;
+  background: rgb(34, 216, 125);
+  padding: 0.7rem;
+}
+#principal-form #submit:hover {
+  background-color: #ff6600;
+}
+
+@media screen and (max-width: 1024px) {
+  #principal-form {
+    padding: 0% 10px;
+  }
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #FEF5E7;
+}
+
+/* NAVBAR RESPONSIVE*/
+header .container-fluid {
+  background-color: #85C1E9;
+}
+header .container-fluid a {
+  color: #fff;
+  text-decoration: none;
+}
+header .container-fluid a:hover {
+  color: #035284;
+}
+
+/* SECCION INICIO*/
+.inicio {
+  background: linear-gradient(to top, rgba(30, 35, 38, 0.493), rgba(30, 35, 38, 0.833)), url("https://media.istockphoto.com/id/489833698/es/foto/dos-tumbonas-en-la-carpa-en-la-playa.jpg?s=612x612&w=0&k=20&c=n3MHN6jRt4_ynBcTyQVZYO2lnBWG3GsZAYTBsjWb_j4=");
+  background-size: cover;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.inicio .contenedorInicio {
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+}
+.inicio .contenedorInicio h1 {
+  padding: 15px;
+  margin: 15px;
+  font-size: 60px;
+}
+.inicio .contenedorInicio p {
+  margin: 20px;
+  padding: 10px;
+}
+.inicio .contenedorInicio .botonInicio {
+  color: rgb(255, 255, 255);
+  line-height: 26px;
+  padding: 6px;
+  border-radius: 10px;
+  text-decoration: none solid;
+  font-style: italic;
+  text-transform: none;
+  background-image: linear-gradient(to right, rgb(246, 132, 40) 0%, rgb(203, 101, 20) 56%, rgb(166, 79, 18) 100%);
+  box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px;
+  border: 2px solid;
+  display: inline-block;
+  font-size: 20px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  font-weight: 600;
+  font-variant: normal;
+}
+.inicio .contenedorInicio .botonInicio:hover {
+  background: #F68428;
+}
+.inicio .contenedorInicio .botonInicio:active {
+  background: #A64F12;
+}
+.inicio .contenedorInicio a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.redes {
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+.redes a {
+  color: #2980B9;
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #5499C7;
+  border-radius: 100%;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  margin: 20px 5px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.redes a:hover {
+  background-color: #85C1E9;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+@media screen and (max-width: 500px) {
+  .inicio {
+    height: auto;
+  }
+  .contenedorInicio h1 {
+    padding: 10px;
+    margin: 10px;
+    font-size: 40px !important;
+  }
+  .inicio .contenedorInicio p, .contenedorInicio a, .redes {
+    font-size: 15px !important;
+  }
+}
+footer {
+  background: #85C1E9;
+  padding: 0 0 30px 0;
+  color: #eee;
+  font-size: 14px;
+  width: 100%;
+  position: absolute;
+}
+footer .container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+footer .container .copyright {
+  text-align: center;
+  padding: 30px;
+}
+
+/*# sourceMappingURL=styles.css.map */

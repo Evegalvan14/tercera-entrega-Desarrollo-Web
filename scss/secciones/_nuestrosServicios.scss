@@ -1,0 +1,63 @@
+// SECCION NUESTROS SERVICIOS //
+$color-titulo:  #ff6600;
+$fuente-titulo: 'Shadows Into Light', cursive;
+$color-h4: #035284;
+
+@mixin flex($direction){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: ($direction);
+}
+
+
+#carouselExampleCaptions{
+    padding: 0 20px;
+    object-fit: cover;
+
+   .carousel-caption{
+        background: linear-gradient(rgba(255,255,255,0.3), rgb(0,0,0,1));
+    }
+
+}
+.nuestrosServicios{
+    @include flex(column);
+    padding: 20px;
+    margin: 40px;
+
+    h1{
+        color:$color-titulo;
+        font-family: $fuente-titulo;
+    }
+}
+.servicio{
+    @include flex(row);
+    flex-wrap: nowrap;
+    margin: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+
+    .descripcion-Serv{
+        margin: 20px;
+        padding: 20px;
+
+        h4{
+            color:$color-h4;
+            
+        }
+    }
+    @media screen and (max-width: 1024px){
+        .servicio{
+            flex-direction: column;
+            align-items: center;
+        }
+        .descripcion-Serv{
+            text-align: center;
+        }
+        #servicio{
+            flex-direction: column-reverse;
+        }   
+    }
+   
+}

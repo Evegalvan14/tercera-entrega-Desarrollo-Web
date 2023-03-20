@@ -1,0 +1,81 @@
+
+/* SECCION FORMULARIO */
+$color-titulo:  #ff6600;
+$color-h4: #035284;
+$fuente-titulo: 'Shadows Into Light', cursive;
+
+@mixin flex($direction){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: ($direction);
+}
+
+.bodyForm{
+    width: 100%;
+    height: auto;
+    color: rgb(255, 255, 255);
+     background: {
+        image: url(https://marketplace.canva.com/Tem-o/MAE0IQTem-o/1/s2/canva-sin-t%C3%ADtulo-MAE0IQTem-o.jpg);   
+        size: cover;
+        color: rgb(69, 182, 235);
+        repeat: no-repeat;
+     };
+}
+
+#heading {
+    max-width: 700px;
+    margin: 4rem auto;
+    padding: 0.6rem;
+    @include flex(column);
+
+    h1{
+        color:$color-h4;
+        font-family: $fuente-titulo
+    
+    }
+}
+#principal-form{
+    padding: 0% 20%;
+    display: flex;
+    justify-content: center;
+
+    #form{
+        background-color: rgba(34, 34, 66, 0.365);
+        padding: 3rem 2.5rem;
+        border-radius: 7px;    
+    }
+
+    .form{
+        width: 100%;
+        font-size: 1rem;
+        padding: 0.7rem;
+        border-radius: 6px;
+        border-width: initial;
+        border-style: none;
+        border-color: initial;
+        border-image: initial;
+    }
+
+    #submit{
+        color: rgb(255, 255, 255);
+        font-size: 1.15rem;
+        background: rgb(34, 216, 125);
+        padding: 0.7rem;
+
+        &:hover{
+            background-color: $color-titulo;
+        }
+    }    
+}
+
+@media screen and (max-width: 1024px){
+    #principal-form{
+        padding: 0% 10px;
+    }      
+}
+
+
+
+
+

@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Shadows+Into+Light&display=swap');
+@import "./secciones/nuestrosServicios";
+@import "./secciones/ofertas";
+@import "./secciones/galeria";
+@import "./secciones/form-contacto";
+
+$color-titulo:  #ff6600;
+$fuente-titulo: 'Shadows Into Light', cursive;
+$color-h4: #035284;
+
+@mixin flex($direction){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: ($direction);
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #FEF5E7 ;  
+}
+
+/* NAVBAR RESPONSIVE*/
+header{
+    .container-fluid{
+        background-color: #85C1E9;
+        a {
+            color:#fff;
+            text-decoration: none;
+                &:hover{
+                    color: $color-h4;
+                }    
+               }
+    }
+}
+
+
+/* SECCION INICIO*/
+.inicio{
+    background: linear-gradient(to top, rgba(30, 35, 38, 0.493), rgba(30, 35, 38, 0.833)),
+    url("https://media.istockphoto.com/id/489833698/es/foto/dos-tumbonas-en-la-carpa-en-la-playa.jpg?s=612x612&w=0&k=20&c=n3MHN6jRt4_ynBcTyQVZYO2lnBWG3GsZAYTBsjWb_j4=");
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    @include flex(row);
+    flex-wrap: wrap;
+    
+    .contenedorInicio{
+        padding: 20px;
+        margin: auto;
+        text-align: center;   
+          h1{
+            padding: 15px;
+            margin: 15px;
+            font-size: 60px;
+          }
+          p{
+            margin: 20px;
+            padding: 10px;
+           }
+          .botonInicio{
+            color: rgb(255, 255, 255); 
+            line-height: 26px; padding: 6px;
+            border-radius: 10px;
+            text-decoration: none solid; 
+            font-style: italic;
+            text-transform: none; 
+            background-image: linear-gradient(to right, rgb(246, 132, 40) 0%, rgb(203, 101, 20) 56%, rgb(166, 79, 18) 100%); 
+            box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
+            border: 2px solid; 
+            display: inline-block;
+            font: {
+                size: 20px; 
+                family: "Trebuchet MS", Helvetica, sans-serif;
+                weight: 600; 
+                variant: normal; 
+            }
+            
+              &:hover {
+                background: #F68428; }
+              &:active {
+                background: #A64F12; 
+                }
+        }
+         a{
+            text-decoration: none;
+            color: #fff;
+         }
+    }
+}
+.redes{
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    a{
+        color: #2980B9;
+        display: inline-block;
+        text-decoration: none;
+        border: 1px solid #5499C7;
+        border-radius: 100%;
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        margin: 20px 5px;
+        font-size: 20px;
+        transition: .3s;
+         &:hover{
+            background-color: #85C1E9;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+    }
+}
+@media screen and (max-width: 500px){
+    .inicio{
+        height: auto;
+    }
+    .contenedorInicio h1{
+        padding: 10px;
+        margin: 10px;
+        font-size: 40px !important;
+    }
+    .inicio .contenedorInicio p, .contenedorInicio a, .redes {
+        font-size: 15px!important;
+    }
+}
+ 
+
+
+// FOOTER //
+footer {
+    background: #85C1E9;
+    padding: 0 0 30px 0;
+    color: #eee;
+    font-size: 14px;
+    width: 100%;
+    position: absolute;
+    .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        .copyright {
+            text-align: center;
+            padding: 30px;
+        
+        }
+    }
+}
+
