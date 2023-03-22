@@ -221,7 +221,7 @@
   flex-direction: column;
 }
 #heading h1 {
-  color: #035284;
+  color: #fff;
   font-family: "Shadows Into Light", cursive;
 }
 
@@ -246,9 +246,9 @@
   border-image: initial;
 }
 #principal-form #submit {
-  color: rgb(255, 255, 255);
+  color: rgb(25, 24, 24);
   font-size: 1.15rem;
-  background: rgb(34, 216, 125);
+  background: rgb(18, 185, 101);
   padding: 0.7rem;
 }
 #principal-form #submit:hover {
@@ -273,14 +273,14 @@ body {
 
 /* NAVBAR RESPONSIVE*/
 header .container-fluid {
-  background-color: #85C1E9;
+  background-color: #C0DCFC;
 }
 header .container-fluid a {
-  color: #fff;
+  color: #03456D;
   text-decoration: none;
 }
 header .container-fluid a:hover {
-  color: #035284;
+  color: #fff;
 }
 
 /* SECCION INICIO*/
@@ -377,7 +377,7 @@ header .container-fluid a:hover {
 footer {
   background: #85C1E9;
   padding: 0 0 30px 0;
-  color: #eee;
+  color: #03456D;
   font-size: 14px;
   width: 100%;
   position: absolute;

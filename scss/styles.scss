@@ -6,7 +6,7 @@
 
 $color-titulo:  #ff6600;
 $fuente-titulo: 'Shadows Into Light', cursive;
-$color-h4: #035284;
+$color-h4: #03456D;
 
 @mixin flex($direction){
     display: flex;
@@ -29,12 +29,12 @@ body{
 /* NAVBAR RESPONSIVE*/
 header{
     .container-fluid{
-        background-color: #85C1E9;
+        background-color: #C0DCFC;
         a {
-            color:#fff;
+            color:$color-h4;
             text-decoration: none;
                 &:hover{
-                    color: $color-h4;
+                    color: #fff;
                 }    
                }
     }
@@ -137,7 +137,7 @@ header{
 footer {
     background: #85C1E9;
     padding: 0 0 30px 0;
-    color: #eee;
+    color: $color-h4;
     font-size: 14px;
     width: 100%;
     position: absolute;
