@@ -104,25 +104,16 @@ $fontfamily-titulo: 'Shadows Into Light', cursive;
     
     }
     @media screen and (max-width: 768px){
-        .item-galeria:nth-child(1){
-            grid-row-start: span 1;
-            grid-column-start: span 1;
-        }
-        .item-galeria:nth-child(2){
+
+        .item-galeria:nth-child(n){
             grid-row-start: span 1;
         }
-        .item-galeria:nth-child(4){
-            grid-row-start: span 1;
+
+        .item-galeria:nth-child(n){
+            grid-column-start: span 2;
+
         }
-        .item-galeria:nth-child(6){
-            grid-column-start: span 1; 
-        }
-        .item-galeria:nth-child(13){
-            grid-column-start: span 1; 
-        }
-        .item-galeria:nth-child(15){
-            grid-column-start: span 1; 
-        }
+
         
     
     }

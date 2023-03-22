@@ -209,24 +209,11 @@
   }
 }
 @media screen and (max-width: 768px) {
-  .contenedor-galeria .item-galeria:nth-child(1) {
-    grid-row-start: span 1;
-    grid-column-start: span 1;
-  }
-  .contenedor-galeria .item-galeria:nth-child(2) {
+  .contenedor-galeria .item-galeria:nth-child(n) {
     grid-row-start: span 1;
   }
-  .contenedor-galeria .item-galeria:nth-child(4) {
-    grid-row-start: span 1;
-  }
-  .contenedor-galeria .item-galeria:nth-child(6) {
-    grid-column-start: span 1;
-  }
-  .contenedor-galeria .item-galeria:nth-child(13) {
-    grid-column-start: span 1;
-  }
-  .contenedor-galeria .item-galeria:nth-child(15) {
-    grid-column-start: span 1;
+  .contenedor-galeria .item-galeria:nth-child(n) {
+    grid-column-start: span 2;
   }
 }
 
