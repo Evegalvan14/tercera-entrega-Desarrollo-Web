@@ -22,6 +22,10 @@ $fontfamily-titulo: 'Shadows Into Light', cursive;
     margin: 10px;
     padding: 20px;
 
+    @media screen and (max-width: 1024px){
+        flex-wrap: wrap;
+    }
+
     .galeria {
         border: 1px solid #ccc;
         text-align: center;
@@ -37,13 +41,6 @@ $fontfamily-titulo: 'Shadows Into Light', cursive;
       }
  }
 
-
-
-  @media screen and (max-width: 1024px){
-    .destinos{
-        flex-wrap: wrap;
-    }
-  }
 
 .contenedor-galeria{
     display: grid;
@@ -77,47 +74,56 @@ $fontfamily-titulo: 'Shadows Into Light', cursive;
     .item-galeria:nth-child(15){
         grid-column-start: span 2; 
     }
+
+    @media screen and (max-width: 1024px){
+        .contenedor-galeria {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .item-galeria:nth-child(1){
+            grid-row-start: span 2 ;
+            grid-column-start: span 2;
+        }
+        .item-galeria:nth-child(2){
+            grid-row-start: span 1;
+        }
+        .item-galeria:nth-child(4){
+            grid-row-start: span 1;
+        }
+    
+        .item-galeria:nth-child(6){
+            grid-column-start: span 2; 
+            grid-row-start: span 1; 
+        }
+        .item-galeria:nth-child(9){
+            grid-row-start: span 1; 
+        }
+    
+    }
+    @media screen and (max-width: 768px){
+        .item-galeria:nth-child(1){
+            grid-row-start: span 1;
+            grid-column-start: span 1;
+        }
+        .item-galeria:nth-child(2){
+            grid-row-start: span 1;
+        }
+        .item-galeria:nth-child(4){
+            grid-row-start: span 1;
+        }
+        .item-galeria:nth-child(6){
+            grid-column-start: span 1; 
+        }
+        .item-galeria:nth-child(13){
+            grid-column-start: span 1; 
+        }
+        .item-galeria:nth-child(15){
+            grid-column-start: span 1; 
+        }
+        
+    
+    }
+    
 }
 
 
-@media screen and (max-width: 1024px){
-    .contenedor-galeria {
-        grid-template-columns: repeat(4, 1fr);
-    }
-    .item-galeria:nth-child(1){
-        grid-row-start: span 2 ;
-        grid-column-start: span 2;
-    }
-    .item-galeria:nth-child(2){
-        grid-row-start: span 1;
-    }
-    .item-galeria:nth-child(4){
-        grid-row-start: span 2;
-    }
-
-    .item-galeria:nth-child(6){
-        grid-column-start: span 2; 
-        grid-row-start: span 2; 
-    }
-    .item-galeria:nth-child(9){
-        grid-row-start: span 2; 
-    }
-
-}
-@media screen and (max-width: 768px){
-    .contenedor-galeria {
-        grid-template-columns: repeat(3, 1fr);
-        row-gap: 10px;
-    } 
-    .item-galeria:nth-child(4){
-        grid-column-start: span 1;
-        grid-row-start: span 1;
-    }
-    .item-galeria:nth-child(7){
-        grid-row-start: span 2; 
-    }
-    .item-galeria:nth-child(5){
-        grid-column-start: span 2;
-    }
-}
 

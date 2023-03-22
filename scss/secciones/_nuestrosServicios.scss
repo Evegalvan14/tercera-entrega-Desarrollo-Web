@@ -37,6 +37,17 @@ $color-h4: #035284;
     padding: 20px;
     border: 1px solid #ccc;
     background-color: #eee;
+     
+    @media screen and (max-width: 768px){
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+            img{
+                max-width: 200px;
+            }
+        
+    
+       }
 
     .descripcion-Serv{
         margin: 20px;
@@ -46,18 +57,10 @@ $color-h4: #035284;
             color:$color-h4;
             
         }
-    }
-    @media screen and (max-width: 1024px){
-        .servicio{
-            flex-direction: column;
-            align-items: center;
-        }
-        .descripcion-Serv{
+        @media screen and (max-width: 1024px){
             text-align: center;
-        }
-        #servicio{
-            flex-direction: column-reverse;
-        }   
+       }
     }
    
-}
+ }
+   

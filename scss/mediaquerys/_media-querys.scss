@@ -1,0 +1,6 @@
+@mixin tablet {
+    @media screen and (max-widht: 768) {
+        @content;
+   
+    }
+}
