@@ -103,6 +103,11 @@
   margin-left: 20px;
 }
 
+.descripcionPromo {
+  margin: 5px;
+  padding: 5px;
+}
+
 .titGaleria, .mexico h3, .republicaDominicana h3, .bahamas h3 {
   color: #ff6600;
   text-align: center;
@@ -156,6 +161,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .contenedor-galeria .img-galeria {
+    max-height: 120px;
+  }
 }
 .contenedor-galeria .item-galeria:nth-child(1) {
   grid-row-start: span 3;

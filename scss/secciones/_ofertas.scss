@@ -31,16 +31,25 @@
         border: 1px solid #ccc;
         background-color: #eee; 
 
+
         @media screen and (max-width: 768px){
             flex-direction: column;
             align-items: center;
         }
+        
         .descripcionPromo{
             margin: 20px;
             padding: 20px;
+
             .precioPromo{
                 margin-left: 20px ;
             }
         }  
     }
 }
+
+    .descripcionPromo{
+            margin: 5px;
+            padding: 5px;
+    }
+
