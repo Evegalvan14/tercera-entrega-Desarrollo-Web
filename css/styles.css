@@ -603,6 +603,8 @@ footer .container a {
 }
 #heading h1 {
   font-family: "Shadows Into Light", cursive;
+  font-size: 6vmin;
+  text-align: center;
 }
 #heading p {
   margin-top: 30px;
