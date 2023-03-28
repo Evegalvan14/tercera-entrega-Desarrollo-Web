@@ -450,11 +450,33 @@ footer .container a {
   padding: 5px;
 }
 
-.titGaleria, .mexico h3, .republicaDominicana h3, .bahamas h3 {
-  color: #ff6600;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.titGaleria {
+  font-size: 6vmin;
+  text-align: center;
+  margin-top: 70px;
+  font-family: "Shadows Into Light", cursive;
+}
+
+.line {
+  width: 150px;
+  height: 4px;
+  background: #ff6600;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+
+.mexico h3, .republicaDominicana h3, .bahamas h3 {
   text-align: center;
   margin-top: 100px;
-  font-size: 30px;
+  color: #ff6600;
+  font-size: 5vmin;
   font-weight: 400;
   font-family: "Shadows Into Light", cursive;
   font-style: normal;
@@ -485,7 +507,7 @@ footer .container a {
 }
 .destinos .galeria:hover {
   background-color: #85C1E9;
-  color: #fff;
+  color: whitesmoke;
 }
 .destinos .galeria a {
   text-decoration: none;
@@ -563,7 +585,7 @@ footer .container a {
 .bodyForm {
   width: 100%;
   height: auto;
-  color: rgb(255, 255, 255);
+  color: whitesmoke;
   background-image: url(https://marketplace.canva.com/Tem-o/MAE0IQTem-o/1/s2/canva-sin-t%C3%ADtulo-MAE0IQTem-o.jpg);
   background-size: cover;
   background-color: rgb(69, 182, 235);
@@ -580,8 +602,10 @@ footer .container a {
   flex-direction: column;
 }
 #heading h1 {
-  color: #fff;
   font-family: "Shadows Into Light", cursive;
+}
+#heading p {
+  margin-top: 30px;
 }
 
 #principal-form {

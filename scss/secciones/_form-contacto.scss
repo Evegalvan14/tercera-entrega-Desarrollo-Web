@@ -1,8 +1,5 @@
 
 /* SECCION FORMULARIO */
-$color-titulo:  #ff6600;
-$color-h4: #035284;
-$fuente-titulo: 'Shadows Into Light', cursive;
 
 @mixin flex($direction){
     display: flex;
@@ -14,7 +11,7 @@ $fuente-titulo: 'Shadows Into Light', cursive;
 .bodyForm{
     width: 100%;
     height: auto;
-    color: rgb(255, 255, 255);
+    color: $color-white;
      background: {
         image: url(https://marketplace.canva.com/Tem-o/MAE0IQTem-o/1/s2/canva-sin-t%C3%ADtulo-MAE0IQTem-o.jpg);   
         size: cover;
@@ -30,9 +27,10 @@ $fuente-titulo: 'Shadows Into Light', cursive;
     @include flex(column);
 
     h1{
-        color:#fff;
-        font-family: $fuente-titulo
-    
+        font-family: $fuente-titulo;
+    }
+    p{
+        margin-top: 30px;
     }
 }
 #principal-form{

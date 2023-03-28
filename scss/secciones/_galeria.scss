@@ -1,18 +1,48 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
 
-$color-titulo:  #ff6600;
-$fontfamily-titulo: 'Shadows Into Light', cursive;
+$color-principal:  #ff6600;
+$color-secund: #03456D;
+$color-white: whitesmoke;
+$fuente-titulo: 'Shadows Into Light', cursive;
 
-.titGaleria, .mexico h3, .republicaDominicana h3, .bahamas h3{
-    color: $color-titulo;
+@mixin line{
+    width: 150px;
+    height: 4px;
+    background: $color-principal;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+.titGaleria{
+    font-size: 6vmin;
+    text-align: center;
+    margin-top: 70px;
+    font-family: $fuente-titulo
+
+}
+
+.line{
+    @include line;
+
+}
+ .mexico h3, .republicaDominicana h3, .bahamas h3{
     text-align: center;  
     margin-top: 100px;
+    color: $color-principal;
       font: {
-        size: 30px;
+        size: 5vmin;
         weight:400;
-        family: $fontfamily-titulo;
+        family:$fuente-titulo ;
         style: normal;
       }
     }   
+   
+
 
  .mexico h4, .republicaDominicana h4, .bahamas h4{
     margin: 30px;
@@ -32,7 +62,7 @@ $fontfamily-titulo: 'Shadows Into Light', cursive;
         margin: 10px;
         padding: 20px;
           &:hover{background-color: #85C1E9;
-        color: #fff;
+          color: $color-white;
           }
           a{
             text-decoration: none;
