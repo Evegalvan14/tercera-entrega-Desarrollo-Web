@@ -1,7 +1,7 @@
 // SECCION NUESTROS SERVICIOS //
-$color-titulo:  #ff6600;
+$color-principal:  #ff6600;
+$color-secund: #03456D;
 $fuente-titulo: 'Shadows Into Light', cursive;
-$color-h4: #035284;
 
 @mixin flex($direction){
     display: flex;
@@ -10,24 +10,44 @@ $color-h4: #035284;
     flex-direction: ($direction);
 }
 
+@mixin line{
+    width: 150px;
+    height: 4px;
+    background: $color-principal;
+    margin: 10px auto;
+    border-radius: 5px;
+}
 
 #carouselExampleCaptions{
     padding: 0 20px;
-    object-fit: cover;
-
+    
+    .d-block{
+        
+        width: 1200px;
+        height: 800px ;
+        object-fit: cover;
+    }
    .carousel-caption{
-        background: linear-gradient(rgba(255,255,255,0.3), rgb(0,0,0,1));
+        background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
     }
 
 }
+
+
 .nuestrosServicios{
     @include flex(column);
     padding: 20px;
     margin: 40px;
 
     h1{
-        color:$color-titulo;
-        font-family: $fuente-titulo;
+    font-size: 6vmin;
+    font-family: $fuente-titulo;
+    }
+    .line{
+        @include line;
+    }
+    p{
+        margin: 15px;
     }
 }
 .servicio{
@@ -45,8 +65,7 @@ $color-h4: #035284;
             img{
                 max-width: 200px;
             }
-        
-    
+         
        }
 
     .descripcion-Serv{
@@ -54,7 +73,7 @@ $color-h4: #035284;
         padding: 20px;
 
         h4{
-            color:$color-h4;
+            color:$color-secund;
             
         }
         @media screen and (max-width: 1024px){

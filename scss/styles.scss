@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Shadows+Into+Light&display=swap');
-@import "./secciones/nuestrosServicios";
-@import "./secciones/ofertas";
-@import "./secciones/galeria";
-@import "./secciones/form-contacto";
 
-$color-titulo:  #ff6600;
+
+$color-principal:  #ff6600;
+$color-secund: #03456D;
+$color-white: whitesmoke;
 $fuente-titulo: 'Shadows Into Light', cursive;
-$color-h4: #03456D;
 
 @mixin flex($direction){
     display: flex;
@@ -14,12 +12,30 @@ $color-h4: #03456D;
     align-items: center;
     flex-direction: ($direction);
 }
+@mixin boton{
+    color: $color-white; 
+    padding: 8px 15px;
+    border-radius: 30px;
+    background-color:$color-principal;
+    text-decoration: none;
+}
+
+@mixin line{
+    width: 150px;
+    height: 4px;
+    background: $color-principal;
+    margin: 10px auto;
+    border-radius: 5px;
+}
 
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
+}
+body, html{
+    overflow-x: hidden;
 }
 
 body{
@@ -29,12 +45,14 @@ body{
 /* NAVBAR RESPONSIVE*/
 header{
     .container-fluid{
-        background-color: #C0DCFC;
+        background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
         a {
-            color:$color-h4;
+            color:$color-white;
             text-decoration: none;
                 &:hover{
-                    color: #fff;
+                    color: $color-white;
+                    background-color:$color-principal;
+
                 }    
                }
     }
@@ -43,61 +61,235 @@ header{
 
 /* SECCION INICIO*/
 .inicio{
-    background: linear-gradient(to top, rgba(30, 35, 38, 0.493), rgba(30, 35, 38, 0.833)),
-    url("https://media.istockphoto.com/id/489833698/es/foto/dos-tumbonas-en-la-carpa-en-la-playa.jpg?s=612x612&w=0&k=20&c=n3MHN6jRt4_ynBcTyQVZYO2lnBWG3GsZAYTBsjWb_j4=");
-    background-size: cover;
-    height: 100vh;
-    color: #fff;
-    @include flex(row);
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+     background: {
+        repeat: no-repeat;
+        position: center;
+        size: cover;
+    };
+    display: flex;
+    align-items: flex-end;
     flex-wrap: wrap;
+    align-content: flex-end;
+    justify-content: center;
+    height: 100vh;
+    color: whitesmoke;
     
     .contenedorInicio{
         padding: 20px;
         margin: auto;
-        text-align: center;   
+        text-align: center;  
+        
           h1{
-            padding: 15px;
             margin: 15px;
-            font-size: 60px;
+            font-size: 5.5rem;
           }
           p{
-            margin: 20px;
-            padding: 10px;
+            font-size: 1rem;
+            margin: 15px 38px;
+    
            }
           .botonInicio{
-            color: rgb(255, 255, 255); 
-            line-height: 26px; padding: 6px;
-            border-radius: 10px;
-            text-decoration: none solid; 
-            font-style: italic;
-            text-transform: none; 
-            background-image: linear-gradient(to right, rgb(246, 132, 40) 0%, rgb(203, 101, 20) 56%, rgb(166, 79, 18) 100%); 
-            box-shadow: rgb(0, 0, 0) 5px 5px 15px 5px; 
-            border: 2px solid; 
+            @include boton;
             display: inline-block;
+        
             font: {
-                size: 20px; 
+                size: 1.3rem; 
                 family: "Trebuchet MS", Helvetica, sans-serif;
-                weight: 600; 
-                variant: normal; 
             }
             
               &:hover {
-                background: #F68428; }
-              &:active {
-                background: #A64F12; 
-                }
+                background: #f87e2d; 
+                border: 2px solid $color-white;
+                padding: 6px 13px;
+            }
         }
          a{
             text-decoration: none;
-            color: #fff;
+            color: $color-white;
+            font-size: 1.3rem;
+           
          }
     }
 }
+
+@media screen and (max-width: 1024px){
+    .inicio{
+        height: auto;
+    }
+    .contenedorInicio h1{
+        padding: 10px;
+        margin: 10px;
+        font-size: 40px !important;
+    }
+    .inicio .contenedorInicio p, .contenedorInicio a, .redes {
+        font-size: 15px!important;
+    }
+}
+
+
+//SECCION EVENTOS//
+.eventos{
+    width: 80%;
+    margin: 80px auto;
+     .title{
+        text-align: center;
+        h2{
+            font-size: 5vmin;
+        }
+        
+        .line{
+            width: 150px;
+            height: 4px;
+            background: $color-principal;
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+     }
+     .card-eventos{
+        @include flex(row); 
+        @media screen and (max-width: 768px){
+            flex-direction: column;
+        }   
+     }
+     .row{
+        display: flex;
+        align-items: center;
+        width: 80%;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 50px;
+        .col{
+            @include flex(column);
+
+            p{
+                padding: 0px 40px;
+            }
+        }
+        .col, img{
+            width: 80%;
+        }
+     }
+}
+
+//SECCION ExPLORAR//
+.explorar{
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    background: {
+        image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1533810019453-7351dbd31aee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGV4cGxvcmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+        position: center;
+        size: cover; 
+        repeat: no-repeat;
+    }
+
+    .explorar-contenido{
+        width: 60%;
+        padding: 50px;
+        color: $color-white;
+        @include flex(column);
+         h2{
+            font-size: 6vmin;
+            margin: 10px;
+         }
+         .line{
+            @include line;
+         }
+         p{
+            color: rgb(221, 221, 221);
+         }
+         .botonInicio{
+            @include boton;
+            margin-top: 40px;
+            text-decoration: none;
+            &:hover {
+                background: #f87e2d; 
+                border: 2px solid $color-white;
+                padding: 6px 13px;
+            }
+         }
+     }
+}
+ 
+//SECCION TOURS
+.tours{
+    .row{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 50px;
+
+
+        .contenido-col{
+            width: 30%;
+            @include flex(column);
+            h2{
+                font-size: 6vmin;
+                margin: 10px auto;
+            }
+            .line{
+                @include line;
+            
+            }
+            p{
+                padding: 0px;
+                margin: 30px auto;
+            }
+            a{
+                @include boton;
+                &:hover {
+                    background: #f87e2d; 
+                    border: 2px solid $color-white;
+                    padding: 6px 13px;
+                }
+            }
+        }
+        .img-col{
+            width: 70%;
+
+            .galeria-tours{
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                align-items: center;
+                img{
+                    width: 300px;
+                    height: 300px;
+                    margin: 10px;
+                }
+            }
+        }
+     }
+
+}
+@media screen and (max-width: 1325px){
+    .row{
+        flex-direction: column;
+        margin: 20px 20ox; 
+     .contenido-col, .img-col{
+        width: 80% !important;
+     }
+    }
+}
+@media screen and (max-width: 831px){
+ .tours .row .img-col .galeria-tours{
+    justify-content: center;
+ }
+.tours .row .img-col .galeria-tours img{
+    width: 250px;
+    height: 250px;
+ }
+}
+
+//SECCION REDES//
 .redes{
     text-align: center;
     padding: 10px;
-    margin-top: 20px;
+    margin-top: 180px;
     a{
         color: #2980B9;
         display: inline-block;
@@ -112,32 +304,19 @@ header{
         transition: .3s;
          &:hover{
             background-color: #85C1E9;
-            color: #fff;
-            border: 1px solid #fff;
+            color: $color-white;
+            border: 1px solid $color-white;
         }
     }
 }
-@media screen and (max-width: 500px){
-    .inicio{
-        height: auto;
-    }
-    .contenedorInicio h1{
-        padding: 10px;
-        margin: 10px;
-        font-size: 40px !important;
-    }
-    .inicio .contenedorInicio p, .contenedorInicio a, .redes {
-        font-size: 15px!important;
-    }
-}
- 
+
 
 
 // FOOTER //
 footer {
     background: #85C1E9;
     padding: 0 0 30px 0;
-    color: $color-h4;
+    color: $color-secund;
     font-size: 14px;
     width: 100%;
     position: absolute;
@@ -148,11 +327,24 @@ footer {
         margin-right: auto;
         margin-left: auto;
         text-align: center;
-        .copyright {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        .p {
             text-align: center;
             padding: 30px;
-        
+        }
+        ul{
+           list-style: none;
+        }
+        a{
+            color: $color-white;
         }
     }
 }
 
+@import "./secciones/nuestrosServicios";
+@import "./secciones/ofertas";
+@import "./secciones/galeria";
+@import "./secciones/form-contacto";

@@ -1,8 +1,21 @@
+
+$color-principal:  #ff6600;
+$color-secund: #03456D;
+$color-white: whitesmoke;
+$fuente-titulo: 'Shadows Into Light', cursive;
+
 @mixin flex($direction){
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: ($direction);
+}
+@mixin line{
+    width: 150px;
+    height: 4px;
+    background: $color-principal;
+    margin: 10px auto;
+    border-radius: 5px;
 }
 
 
@@ -23,6 +36,18 @@
 .ofertas{
     @include flex(column);
     flex-wrap: wrap;
+
+    .title{
+        h2{
+            margin-top: 40px;
+            padding-top: 20px;
+            font-size: 6vmin;
+            font-family: $fuente-titulo;
+        }
+        .line{
+            @include line;
+        }
+    }
     .contenedorPromo{
         @include flex(row);
         flex-wrap: nowrap;
@@ -30,7 +55,7 @@
         padding: 20px;
         border: 1px solid #ccc;
         background-color: #eee; 
-
+        
 
         @media screen and (max-width: 768px){
             flex-direction: column;
