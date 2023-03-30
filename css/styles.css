@@ -242,6 +242,7 @@ header .container-fluid a:hover {
 .tours .row .contenido-col p {
   padding: 10px;
   margin: 30px 15px;
+  text-align: center;
 }
 .tours .row .contenido-col a {
   color: black;
