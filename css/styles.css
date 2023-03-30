@@ -321,17 +321,18 @@ footer .container {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
   text-align: center;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
+footer .container .container-secciones, footer .container .copyright {
+  margin: 15px;
+}
 footer .container .p {
   text-align: center;
-  padding: 30px;
+  padding: 10px;
 }
 footer .container ul {
   list-style: none;
