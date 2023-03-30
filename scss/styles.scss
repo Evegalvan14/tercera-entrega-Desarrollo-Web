@@ -283,8 +283,8 @@ header{
                justify-content: space-evenly;
                 img{
                     object-fit: cover;
-                    width: 50vmin;
-                    height: 50vmin;
+                    width: 40vmin;
+                    height: 40vmin;
                     margin: 10px;
                 }
             }
@@ -343,6 +343,7 @@ footer {
     width: 100%;
     position: absolute;
     .container {
+        margin-top: 20px;
         width: 100%;
         padding-right: 15px;
         padding-left: 15px;

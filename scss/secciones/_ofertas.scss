@@ -25,14 +25,15 @@ $fuente-titulo: 'Shadows Into Light', cursive;
     flex-wrap: wrap;
     margin-top: 50px;
     padding-top: 15px;
-
-    @media screen and (max-width: 768px){
-        img{
-            max-width: 350px;
-            position: relative;
+    img{
+        @media screen and (max-width: 600px){
+          width: 300px;
+          height: 300px;        
       }
     }
+
 }
+
 .ofertas{
     @include flex(column);
     flex-wrap: wrap;
@@ -55,11 +56,24 @@ $fuente-titulo: 'Shadows Into Light', cursive;
         padding: 20px;
         border: 1px solid #ccc;
         background-color: #eee; 
+        img{
+            width: 300px;
+            height: 230px;
+            object-fit: cover;
+            @media screen and (max-width: 500px){
+                max-width: 200px;
+            }
+        }
         
 
-        @media screen and (max-width: 768px){
+        @media screen and (max-width: 950px){
             flex-direction: column;
             align-items: center;
+            text-align: center;
+        }
+        @media screen and (max-width: 500px){
+            padding: 10px;
+            margin: 10px;
         }
         
         .descripcionPromo{
@@ -72,9 +86,3 @@ $fuente-titulo: 'Shadows Into Light', cursive;
         }  
     }
 }
-
-    .descripcionPromo{
-            margin: 5px;
-            padding: 5px;
-    }
-
