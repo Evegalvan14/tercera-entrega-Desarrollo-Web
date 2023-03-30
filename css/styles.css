@@ -29,7 +29,7 @@ header .container-fluid a:hover {
 
 /* SECCION INICIO*/
 .inicio {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../Imagenes/background1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -48,15 +48,15 @@ header .container-fluid a:hover {
 }
 .inicio .contenedorInicio h1 {
   margin: 15px;
-  font-size: 5.5rem;
+  font-size: 5.5vw;
 }
 .inicio .contenedorInicio p {
-  font-size: 1rem;
+  font-size: 1.5vw;
   margin: 15px 38px;
   text-align: center;
 }
 .inicio .contenedorInicio .botonInicio {
-  color: whitesmoke;
+  color: black;
   padding: 8px 15px;
   border-radius: 30px;
   background-color: #ff6600;
@@ -92,15 +92,19 @@ header .container-fluid a:hover {
 .eventos {
   width: 80%;
   margin: 80px auto;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .eventos {
+    width: 100%;
+    margin: 60px 5px;
+  }
 }
 .eventos .title {
   text-align: center;
 }
 .eventos .title h2 {
   font-size: 5vmin;
-}
-.eventos .title h5 {
-  text-align: center;
 }
 .eventos .title .line {
   width: 150px;
@@ -112,20 +116,23 @@ header .container-fluid a:hover {
 .eventos .card-eventos {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: row;
 }
 @media screen and (max-width: 768px) {
   .eventos .card-eventos {
     flex-direction: column;
+    align-items: center;
   }
 }
 .eventos .row {
   display: flex;
+  justify-content: center;
   align-items: center;
+  flex-direction: row;
+  align-content: center;
+  flex-wrap: wrap;
   width: 80%;
-  width: 100%;
-  justify-content: space-between;
   margin-top: 50px;
 }
 .eventos .row .col {
@@ -133,6 +140,13 @@ header .container-fluid a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.eventos .row .col h3 {
+  margin: 10px;
+  text-align: center;
+}
+.eventos .row .col h4 {
+  text-align: center;
 }
 .eventos .row .col p {
   padding: 0px 40px;
@@ -146,7 +160,7 @@ header .container-fluid a:hover {
   height: 80vh;
   display: flex;
   align-items: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1533810019453-7351dbd31aee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGV4cGxvcmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/background2.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -159,6 +173,11 @@ header .container-fluid a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+@media screen and (max-width: 575px) {
+  .explorar .explorar-contenido {
+    width: 100%;
+  }
 }
 .explorar .explorar-contenido h2 {
   font-size: 6vmin;
@@ -173,9 +192,10 @@ header .container-fluid a:hover {
 }
 .explorar .explorar-contenido p {
   color: rgb(221, 221, 221);
+  margin-top: 10px;
 }
 .explorar .explorar-contenido .botonInicio {
-  color: whitesmoke;
+  color: black;
   padding: 8px 15px;
   border-radius: 30px;
   background-color: #ff6600;
@@ -192,12 +212,18 @@ header .container-fluid a:hover {
 .tours .row {
   display: flex;
   align-items: center;
+  flex-direction: row;
   width: 100%;
   justify-content: space-between;
   margin-top: 50px;
 }
+@media screen and (max-width: 1024px) {
+  .tours .row {
+    flex-direction: column;
+    margin: 20px 20ox;
+  }
+}
 .tours .row .contenido-col {
-  width: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -205,7 +231,7 @@ header .container-fluid a:hover {
 }
 .tours .row .contenido-col h2 {
   font-size: 6vmin;
-  margin: 10px auto;
+  margin: 10px 10px;
 }
 .tours .row .contenido-col .line {
   width: 150px;
@@ -216,10 +242,10 @@ header .container-fluid a:hover {
 }
 .tours .row .contenido-col p {
   padding: 0px;
-  margin: 30px auto;
+  margin: 30px 15px;
 }
 .tours .row .contenido-col a {
-  color: whitesmoke;
+  color: black;
   padding: 8px 15px;
   border-radius: 30px;
   background-color: #ff6600;
@@ -231,36 +257,26 @@ header .container-fluid a:hover {
   padding: 6px 13px;
 }
 .tours .row .img-col {
-  width: 70%;
+  margin-top: 15px;
 }
 .tours .row .img-col .galeria-tours {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 .tours .row .img-col .galeria-tours img {
-  width: 300px;
-  height: 300px;
+  object-fit: cover;
+  width: 30vmin;
+  height: 30vmin;
   margin: 10px;
 }
 
-@media screen and (max-width: 1325px) {
-  .row {
-    flex-direction: column;
-    margin: 20px 20ox;
-  }
-  .row .contenido-col, .row .img-col {
-    width: 80% !important;
-  }
-}
 @media screen and (max-width: 831px) {
   .tours .row .img-col .galeria-tours {
     justify-content: center;
-  }
-  .tours .row .img-col .galeria-tours img {
-    width: 250px;
-    height: 250px;
   }
 }
 .redes {
@@ -288,7 +304,7 @@ header .container-fluid a:hover {
 }
 
 footer {
-  background: #85C1E9;
+  background: #9ed4f7;
   padding: 0 0 30px 0;
   color: #03456D;
   font-size: 14px;
@@ -315,7 +331,7 @@ footer .container ul {
   list-style: none;
 }
 footer .container a {
-  color: whitesmoke;
+  color: #03456D;
 }
 
 #carouselExampleCaptions {
@@ -479,7 +495,7 @@ footer .container a {
 .mexico h3, .republicaDominicana h3, .bahamas h3 {
   text-align: center;
   margin-top: 100px;
-  color: #ff6600;
+  color: #03456D;
   font-size: 5vmin;
   font-weight: 400;
   font-family: "Shadows Into Light", cursive;
@@ -507,7 +523,7 @@ footer .container a {
   border: 1px solid #ccc;
   text-align: center;
   margin: 10px;
-  padding: 20px;
+  padding: 10px;
 }
 .destinos .galeria:hover {
   background-color: #85C1E9;
@@ -516,6 +532,17 @@ footer .container a {
 .destinos .galeria a {
   text-decoration: none;
   color: black;
+}
+.destinos .galeria a img {
+  object-fit: cover;
+  object-position: bottom;
+  max-width: 100%;
+  height: 400px;
+}
+@media screen and (max-width: 525px) {
+  .destinos .galeria a img {
+    height: 300px;
+  }
 }
 
 .contenedor-galeria {

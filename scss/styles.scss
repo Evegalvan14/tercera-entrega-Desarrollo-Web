@@ -13,14 +13,14 @@ $color-secund: #03456D;
 $color-white: whitesmoke;
 $fuente-titulo: 'Shadows Into Light', cursive;
 
-@mixin flex($direction){
+@mixin flex($direction, $align){
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: ($align);
     flex-direction: ($direction);
 }
 @mixin boton{
-    color: $color-white; 
+    color: black; 
     padding: 8px 15px;
     border-radius: 30px;
     background-color:$color-principal;
@@ -63,7 +63,7 @@ header{
 /* SECCION INICIO*/
 .inicio{
     background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url("https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+    url(../Imagenes/background1.jpg);
      background: {
         repeat: no-repeat;
         position: center;
@@ -84,10 +84,10 @@ header{
         
           h1{
             margin: 15px;
-            font-size: 5.5rem;
+            font-size: 5.5vw;
           }
           p{
-            font-size: 1rem;
+            font-size: 1.5vw;
             margin: 15px 38px;
             text-align: center;
     
@@ -135,42 +135,52 @@ header{
 .eventos{
     width: 80%;
     margin: 80px auto;
+    text-align: center;
+    @media screen and (max-width: 768px){
+        width: 100%;
+        margin: 60px 5px;
+    }
      .title{
         text-align: center;
         h2{
             font-size: 5vmin;
         }
-        h5{
-            text-align: center;
-        }
-        
+
         .line{
-            width: 150px;
-            height: 4px;
-            background: $color-principal;
-            margin: 10px auto;
-            border-radius: 5px;
+            @include line;
+
         }
      }
      .card-eventos{
-        @include flex(row); 
+        @include flex(row, flex-start); 
         @media screen and (max-width: 768px){
             flex-direction: column;
+            align-items: center;
+        
         }   
      }
      .row{
-        display: flex;
-        align-items: center;
+        @include flex (row, center);
+        align-content: center;
+        flex-wrap: wrap;
         width: 80%;
-        width: 100%;
-        justify-content: space-between;
         margin-top: 50px;
+        
         .col{
-            @include flex(column);
+            @include flex(column, center);
+            h3{
+                margin: 10px;
+                text-align: center;
+            }
+            h4{
+                text-align: center;
+            }
 
             p{
                 padding: 0px 40px;
             }
+
+            
         }
         .col, img{
             width: 80%;
@@ -185,7 +195,7 @@ header{
     display: flex;
     align-items: center;
     background: {
-        image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.unsplash.com/photo-1533810019453-7351dbd31aee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fGV4cGxvcmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+        image:linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../Imagenes/background2.jpg);
         position: center;
         size: cover; 
         repeat: no-repeat;
@@ -195,16 +205,21 @@ header{
         width: 60%;
         padding: 50px;
         color: $color-white;
-        @include flex(column);
+        @include flex(column, center);
+        @media screen and (max-width: 575px){
+            width: 100%;
+        }
          h2{
             font-size: 6vmin;
             margin: 10px;
          }
          .line{
             @include line;
+            
          }
          p{
             color: rgb(221, 221, 221);
+            margin-top: 10px;
          }
          .botonInicio{
             @include boton;
@@ -224,17 +239,21 @@ header{
     .row{
         display: flex;
         align-items: center;
+        flex-direction: row;
         width: 100%;
         justify-content: space-between;
         margin-top: 50px;
-
+        @media screen and (max-width: 1024px){
+                flex-direction: column;
+                margin: 20px 20ox;    
+        }
 
         .contenido-col{
-            width: 30%;
-            @include flex(column);
+        
+            @include flex(column, center);
             h2{
                 font-size: 6vmin;
-                margin: 10px auto;
+                margin: 10px 10px;
             }
             .line{
                 @include line;
@@ -242,7 +261,7 @@ header{
             }
             p{
                 padding: 0px;
-                margin: 30px auto;
+                margin: 30px 15px;
             }
             a{
                 @include boton;
@@ -254,16 +273,18 @@ header{
             }
         }
         .img-col{
-            width: 70%;
-
+            margin-top: 15px;
             .galeria-tours{
                 display: flex;
                 flex-wrap: wrap;
                 width: 100%;
                 align-items: center;
+                align-content: center;
+               justify-content: center;
                 img{
-                    width: 300px;
-                    height: 300px;
+                    object-fit: cover;
+                    width: 30vmin;
+                    height: 30vmin;
                     margin: 10px;
                 }
             }
@@ -271,23 +292,13 @@ header{
      }
 
 }
-@media screen and (max-width: 1325px){
-    .row{
-        flex-direction: column;
-        margin: 20px 20ox; 
-     .contenido-col, .img-col{
-        width: 80% !important;
-     }
-    }
-}
+
 @media screen and (max-width: 831px){
  .tours .row .img-col .galeria-tours{
     justify-content: center;
  }
-.tours .row .img-col .galeria-tours img{
-    width: 250px;
-    height: 250px;
- }
+
+
 }
 
 //SECCION REDES//
@@ -319,7 +330,7 @@ header{
 
 // FOOTER //
 footer {
-    background: #85C1E9;
+    background: #9ed4f7;
     padding: 0 0 30px 0;
     color: $color-secund;
     font-size: 14px;
@@ -344,7 +355,7 @@ footer {
            list-style: none;
         }
         a{
-            color: $color-white;
+            color: $color-secund;
         }
     }
 }
